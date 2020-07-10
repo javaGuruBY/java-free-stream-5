@@ -5,5 +5,20 @@ public class App {
         BottleOfWater newBottle = new BottleOfWater(2);
         newBottle.drinkSomeWater(1.5);
         newBottle.drinkSomeWater(2);
+
+        Bin bin = new Bin();
+        bin.fillUpBin(newBottle);
+        bin.fillUpBin(20);
+        bin.cleanBin();
+
+        Book book = new Book("Breakfast at Tiffany's","Trumen Capote", 200);
+        book.readSomePage(100);
+        book.readSomePage(100);
+
+        Key key = new Key();
+        key.setTypeKey("Door");
+        key.openThingWithInputTypeOfKey();
+
+
     }
 }
