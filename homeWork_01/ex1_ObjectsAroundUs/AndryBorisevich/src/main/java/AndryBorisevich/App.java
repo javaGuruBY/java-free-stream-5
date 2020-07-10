@@ -19,6 +19,9 @@ public class App {
         key.setTypeKey("Door");
         key.openThingWithInputTypeOfKey();
 
+        SunGlasses sunGlasses = new SunGlasses();
+        sunGlasses.putSunGlassesOn();
+
 
     }
 }
