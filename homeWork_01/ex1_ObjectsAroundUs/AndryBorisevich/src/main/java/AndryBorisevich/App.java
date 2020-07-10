@@ -22,6 +22,8 @@ public class App {
         SunGlasses sunGlasses = new SunGlasses();
         sunGlasses.putSunGlassesOn();
 
-
+        cup cup = new cup ("tea",0.34);
+        cup.sipAtCupOf(0.12);
+        cup.sipAtCupOf(0.22);
     }
 }
