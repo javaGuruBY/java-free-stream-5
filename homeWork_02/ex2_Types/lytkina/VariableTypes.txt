@@ -1,0 +1,20 @@
+Количество кораблей в порту - int numberOfShips, byte numberOfShips, short numberOfShips, long numberOfShips
+Счетчик целых чисел - int counter, byte counter, short counter, long counter
+Первое целое число - int firstNumber, byte firstNumber, short firstNumber, long firstNumber
+Случайное целое число - int randomNumber, byte randomNumber, short randomNumber, long randomNumber
+Случайное вещественное число - float randomNumber, double randomNumber
+Скорость движения автомобиля - float carSpeed, double carSpeed
+Введенное пользователем целое число - int inputNumber, byte inputNumber, short inputNumber, long inputNumber
+Наибольшее целое число - int maxNumber, byte maxNumber, short maxNumber, long maxNumber
+Наименьшее вещественное число - float minNumber, double minNumber
+Левая граница диапазона целых чисел - int firstNumber, byte firstNumber, short firstNumber, long firstNumber
+Правая граница диапазона целых чисел - int lastNumber, byte lastNumber, short lastNumber, long lastNumber
+Загаданное пользователем целое число - int userNumber, byte userNumber, short userNumber, long userNumber
+Денежный баланс - float cashBalance, double cashBalance
+Количество колес у велосипеда - int numberOfBicycleWheels, byte numberOfBicycleWheels, short numberOfBicycleWheels, long numberOfBicycleWheels
+Голодный ли человек - boolean isHungry
+Символ латинского алфавита - char symbol
+Четное ли число - boolean isEven
+Текущий год - int currentYear, short currentYear
+Знак пробела - char gap
+Стоимость билета - float ticketPrice, double ticketPrice
