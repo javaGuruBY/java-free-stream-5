@@ -11,12 +11,10 @@ public class MathOperationsDemo {
 
     }
     public static int addition(int firstNumber, int secondNumber){
-        int result = firstNumber + secondNumber;
-        return result;
+        return firstNumber + secondNumber;
     }
     public static int subtraction(int firstNumber, int secondNumber){
-        int result = firstNumber - secondNumber;
-        return result;
+        return firstNumber - secondNumber;
     }
     public static double division (int firstNumber, int secondNumber){
         double result;
@@ -27,7 +25,6 @@ public class MathOperationsDemo {
         return  result;
     }
     public static int multiplication (int firstNumber, int secondNumber){
-        int result = firstNumber * secondNumber;
-        return result;
+        return firstNumber * secondNumber;
     }
 }
