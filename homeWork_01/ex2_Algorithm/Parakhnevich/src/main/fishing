@@ -1,0 +1,21 @@
+public class fishing{
+
+    public void start(){
+        System.out.println("Алгоритм ловли рыбы");
+        preparing();
+        going();
+        preparing2();
+        relaxing();
+    }
+
+    public void preparing(){
+        System.out.println("Шаг 1: приготовить снасти и удочку(и)");
+    }
+    public void going(){
+        System.out.println("Шаг 2: Добраться до места для рыбалки");
+    }
+    public void prepating2(){ System.out.println("Шаг 3: Забросить удочку вместе со снастями");
+    }
+    public void relaxing(){ System.out.println("Шаг 4: Наслаждаться");
+    }
+}
