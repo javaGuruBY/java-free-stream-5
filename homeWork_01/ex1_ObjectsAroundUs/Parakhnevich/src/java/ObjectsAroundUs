@@ -1,0 +1,58 @@
+class ObjectAroundUs{
+    public static void main(String[] args) {
+        {  Objects obj = new Objects();
+    }
+        public Objects() {
+            door();
+            pc();
+            light();
+            window();
+            phone();
+        }
+    }
+    public void door (){
+        System.out.println("Обьект - дверь");
+        System.out.println("Cостояние:");
+        System.out.println("    1.Открыта/не открыта");
+        System.out.println("    2.Материал и размер");
+        System.out.println("Поведение:");
+        System.out.println("    1.Открыть");
+        System.out.println("    2.Закрыть");
+    }
+    public void pc(){
+        System.out.println("Объект - персональный компьютер");
+        System.out.println("Cостояние:");
+        System.out.println("    1.Включен/не включен");
+        System.out.println("    2.Девайсы");
+        System.out.println("Поведение:");
+        System.out.println("    1.Включить");
+        System.out.println("    2.Использовать");
+        System.out.println("    3.Выключить");
+    }
+    public void light(){
+        System.out.println("Объект - лампа");
+        System.out.println("Cостояние:");
+        System.out.println("    1.Горит/не горит");
+        System.out.println("Поведение:");
+        System.out.println("    1.Зажечь");
+        System.out.println("    2.Потушить");
+    }
+    public void window(){
+        System.out.println("Объект - окно");
+        System.out.println("Cостояние:");
+        System.out.println("    1.Открыто/закрыто");
+        System.out.println("Поведение:");
+        System.out.println("    1.Открыть");
+        System.out.println("    2.Закрыть");
+    }
+    public void phone(){
+        System.out.println("Объект - телефон");
+        System.out.println("Cостояние:");
+        System.out.println("    1.Включен/не включен");
+        System.out.println("    2.Используется");
+        System.out.println("Поведение:");
+        System.out.println("    1.Включить");
+        System.out.println("    2.Использовать");
+        System.out.println("    3.Выключить");
+    }
+}
