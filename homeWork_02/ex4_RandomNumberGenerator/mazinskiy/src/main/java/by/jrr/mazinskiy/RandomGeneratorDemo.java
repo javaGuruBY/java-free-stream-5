@@ -5,7 +5,8 @@ public class RandomGeneratorDemo {
         double a = Math.random();
         double b = Math.random();
         double c = Math.random();
-        System.out.println(a + b + c);
+        System.out.printf(a + " "+ b+ " "+ c + "\n");
+        System.out.println( a + b + c);
 
     }
 }
