@@ -1,0 +1,20 @@
+1. Количество кораблей в порту  -  numberShipsInPort
+2. Счетчик целых чисел   -  integerCounter
+3. Первое число  -  firstNumber
+4. Ответ на вопрос  -  answerTheQuestion
+5. Случайное число  -  randomNumber
+6. Генератор случайных чисел   -  randomNumberGenerator
+7. Цвет автомобиля   -  carColor
+8. Скорость движения автомобиля   -  carSpeed
+9. Введеное число пользователем   -  inputUserNumber
+10. Наибольшее число   -   maxNumber
+11. Наименьшее число   -   minNumber
+12. Левая граница диапазона чисел  -  leftLimitNumberRange
+13. Правая граница диапазона чисел  -  rightLimitNumberRange
+14. Загаданное пользователем число  -  userSecretNumber
+15. Вариант ответа  -  possibleAnswer
+16. Банковский счет  -  bankAccount
+17. Банковский баланс  -  bankAccountBalance
+18. Кредитная карта  -  creditCard
+19. Количество колес у велосипеда  -  numberOfBikeWheels
+20. Стоимость билета  -  ticketCost
