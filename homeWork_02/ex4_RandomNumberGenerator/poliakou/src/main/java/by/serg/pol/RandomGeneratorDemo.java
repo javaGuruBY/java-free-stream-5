@@ -17,9 +17,9 @@ public class RandomGeneratorDemo {
         System.out.println(nextRandomNumber);
         System.out.println(lastRandomNumber);
 
-        int summaRandonNumber = firstRandomNumber + nextRandomNumber + lastRandomNumber;
+        int sumRandonNumber = firstRandomNumber + nextRandomNumber + lastRandomNumber;
 
-        System.out.println("summaRandonNumber = " + summaRandonNumber);
+        System.out.println("sumRandonNumber = " + sumRandonNumber);
     }
 
 
