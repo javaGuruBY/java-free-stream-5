@@ -3,6 +3,7 @@ package by.jrr.ruslan_sto;
 public class Types {
 
     public static void main(String[] args) {
+
         System.out.println("//1.Количество кораблей в порту -short, int, byte\n" +
                 "//2.Счетчик целых чисел- long, int, short, byte\n" +
                 "//3.Первое целое число- long, int, short, byte\n" +
