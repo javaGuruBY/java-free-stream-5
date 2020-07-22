@@ -2,27 +2,27 @@ package by.jrr.ruslan_sto;
 
 public class Variables {
     int shipsInThePort; //Количество кораблей в порту
+    int complimentNumber; //Счетчик целых чисел
+    int firstNumber; //Первое число
+    int answerTheQuestion; //Ответ на вопрос
+    int randomNumber; //Случайное число
+    int randomNumberGenerator; //Генератор случайных чисел
+    int autoColor; //Цвет автомобиля
+    int autoSpeed; //Скорость движения автомобиля
+    int numberEnteredByUser; //Введеное число пользователем
+    int maxNumber; //Наибольшее число
+    int minNumber; //Наименьшее число
+    int left_NumbersBorder; //Левая граница диапазона чисел
+    int right_NumbersBorder; //Правая граница диапазона чисел
+    int userGuessedNumber; // Загаданное пользователем число
+    int possibleAnswer; //Вариант ответа
+    int bankAccount; //Банковский счет
+    int bankBalance; //Банковский баланс
+    int creditCardNumber; //Кредитная карта
+    int bikeWheelsQuantity; //Количество колес у велосипеда
+    int ticketCost;//Стоимость билета
+
     public static void main(String[] args) {
 
-        //1.	Количество кораблей в порту  - shipsInThePort
-//2.	Счетчик целых чисел  - complimentNumber
-//3.	Первое число	- firstNumber
-//4.	Ответ на вопрос	- answerTheQuestion
-//5.	Случайное число	- randomNumber
-//6.	Генератор случайных чисел	-randomNumberGenerator
-//7.	Цвет автомобиля	- autoColor
-//8.	Скорость движения автомобиля	- autoSpeed
-//9.	Введеное число пользователем 	- numberEnteredByUser
-//10.	Наибольшее число	- maxNumber
-//11.	Наименьшее число	- minNumber
-//12.	Левая граница диапазона чисел	-left_NumbersBorder
-//13.	Правая граница диапазона чисел	- right_NumbersBorder
-//14.	Загаданное пользователем число	- userGuessedNumber
-//15.	Вариант ответа 	- possibleAnswer
-//16.	Банковский счет	- bankAccount
-//17.	Банковский баланс	- bankBalance
-//18.	Кредитная карта	- creditCardNumber
-//19.	Количество колес у велосипеда	-bikeWheelsQuantity
-//20.	Стоимость билета	- ticketCost
     }
 }
