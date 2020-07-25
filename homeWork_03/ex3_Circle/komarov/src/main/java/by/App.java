@@ -1,15 +1,13 @@
 package by;
 
-import by.komarov.bean.Dog;
+import by.komarov.bean.Human;
 
 
 public class App {
     public static void main(String[] args) {
-        Dog dog = new Dog("Sharik", "Brown", 3   );
-        dog.printInformationaboutDog();
-        dog.eat();
-        dog.sleep();
-        dog.voice();
+        Human human = new Human("Egor",  42   );
+        human.greet();
+      
 
         System.out.println();
     }
