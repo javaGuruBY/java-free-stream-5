@@ -63,11 +63,3 @@ public class PhraseAnalyserServiceTest {
 
 
 
-//SignComparato signComparato = new SignComparato(-5);
-//        SignComparatoService signComparatoService = new SignComparatoService();
-//        if (signComparato.getNumber() > 0) {
-//            String expected = "Number is negative";
-//            String actual = signComparatoService.DetermineTheSignOfTheNumber(signComparato);
-//            assertEquals(expected, actual);
-//        }
-//    }
