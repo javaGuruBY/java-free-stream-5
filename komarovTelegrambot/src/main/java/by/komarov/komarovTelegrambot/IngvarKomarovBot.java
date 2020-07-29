@@ -1,16 +1,18 @@
 package by.komarov.komarovTelegrambot;
 
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+@Component
 public class IngvarKomarovBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "null";
+        return "1240356999:AAHAvcsO3NJiMg-8voYyz7YBSCyynMf0Au0";
     }
 
     @Override
@@ -33,7 +35,7 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
         
     }
     public void sendMsg (Message message, String response){
-        SendMessage sendMessage = new sendMessage();
+        SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(message.getChatId());
         sendMessage.setText(response);
 
