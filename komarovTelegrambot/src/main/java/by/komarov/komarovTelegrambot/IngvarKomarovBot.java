@@ -26,14 +26,25 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
             Message message = update.getMessage();
             if(message.hasText()){
                 String text = message.getText();       
-                if(text.equals("/Что это?")){
+                if(text.equals("Что это?")){
                     String response = "Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
                     sendMsg(message, response);
                 }
             }
         }
+        if(update.hasMessage()){
+            Message message = update.getMessage();
+            if(message.hasContact()){
+                String Contact = message.getContact();
+                if(Contact.equals())
+            }
+        }
         
     }
+
+
+
+
     public void sendMsg (Message message, String response){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(message.getChatId());
