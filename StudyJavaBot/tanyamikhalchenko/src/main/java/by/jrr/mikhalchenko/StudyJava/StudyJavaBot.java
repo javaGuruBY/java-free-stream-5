@@ -62,16 +62,15 @@ public class StudyJavaBot extends TelegramLongPollingBot {
                    }else if (question.contains("JVM")) {
                        String responce = "Java Virtual Machine (JVM) is an abstract computing machine that enables computer to run a Java program. ";
                        sendMesg(message, responce);
-                   }
-                   else if (!question.contains("JRE") || !question.contains("JDK") || !question.contains("JVM") || !question.contains("Google") || !question.contains("Java")) {
+                   } else {
                        String responce = "I don't know yet, but you can find the answer here https://javaguru.by/";
                        sendMesg(message, responce);
                    }
-
-                   }
+                }
             }
         }
     }
+
     public void sendMesg(Message message,String responce){
         SendMessage sendMessage = new SendMessage();
         sendMessage.setChatId(message.getChatId());
