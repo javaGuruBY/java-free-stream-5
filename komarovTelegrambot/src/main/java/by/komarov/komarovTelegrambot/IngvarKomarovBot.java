@@ -36,27 +36,38 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
             Message message = update.getMessage();
             if(message.hasText()){
                 String text = message.getText();
-                if(text.equals("/Что это?")){
-                    String response = "Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
-                    sendMsg(message, response);
-                } else if (text.equals("/Bye")){
-                    String response = "Ok, bye";
-                    sendMsg(message, response);
-                } else if (text.equals("/Что сделать на ужин?")){
-                    String response = "На ночь есть вредно!";
-                    sendMsg(message, response);
-                } else if (text.equals("/Какой фильм глянуть?")) {
-                    String response = "Смотря какое настроение у тебя сегодня";
-                    sendMsg(message, response);
-                } else if (text.equals("/Хорошее")) {
-                    String response = "Тогда глянь что нибудь что заставит посмотреть на мир по другому, например фильм Лифт, ну или сам выбери https://rezka.ag/films/best/ ";
-                    sendMsg(message, response);
-                } else if (text.equals("/Плохое")) {
-                    String response = "Тогда глянь что нибудь из комедий, Начало времен довольно не плохая";
-                    sendMsg(message, response);
-                } else if (text.startsWith("/Say ")) {
+                switch (text) {
+                    case "/Что это?": {
+                        String response = "Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
+                        sendMsg(message, response);
+                        break;
+                    }
+                    case "/Bye": {
+                        String response = "Ok, bye";
+                        sendMsg(message, response);
+                        break;
+                    }
+                    case "/Что сделать на ужин?": {
+                        String response = "На ночь есть вредно!";
+                        sendMsg(message, response);
+                        break;
+                    }
+                    case "/Какой фильм глянуть?": {
+                        String response = "Смотря какое настроение у тебя сегодня";
+                        sendMsg(message, response);
+                        break;
+                    }
+                    case "/Хорошее": {
+                        String response = "Тогда глянь что нибудь что заставит посмотреть на мир по другому, например фильм Лифт, ну или сам выбери https://rezka.ag/films/best/ ";
+                        sendMsg(message, response);
+                        break;
+                    }
+                    case "/Плохое": {
+                        String response = "Тогда глянь что нибудь из комедий, Начало времен довольно не плохая";
+                        sendMsg(message, response);
+                        break;
+                    }
                 }
-
              }
         }
     }
