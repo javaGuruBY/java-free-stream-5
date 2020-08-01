@@ -4,7 +4,12 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 public enum  BotCommand {
-    START("/start"),
+    START("/start") {
+        @Override
+        public void dispatch(Update update) {
+            super.dispatch(update);
+        }
+    },
     HELP("/help"),
     SETTING("/settings"),
     NONE("/none");
@@ -17,9 +22,9 @@ public enum  BotCommand {
     BotCommand(String command) {
         this.command = command;
     }
-}
 
-    private BotCommand getCommand(Update update) {
+
+    public BotCommand getCommand(Update update) {
         if (update.hasMessage()) {
             Message message = update.getMessage();
             if (message != null && message.hasText()) {
@@ -36,7 +41,7 @@ public enum  BotCommand {
         return BotCommand.NONE;
     }
 
-    public void dispatch(Update update) {
+    public void dispatch (Update update) {
         switch (getCommand(update)) {
             case HELP:
                 break;

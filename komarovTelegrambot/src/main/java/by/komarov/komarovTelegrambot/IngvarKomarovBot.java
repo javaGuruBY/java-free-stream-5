@@ -16,6 +16,7 @@ import java.util.List;
 public class IngvarKomarovBot extends TelegramLongPollingBot {
     @Autowired
     RequestDispatcher requestDispatcher;
+    private Update update;
 
     @Override
     public String getBotToken() {
@@ -28,23 +29,25 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
     }
 
     @Override
-    public void onUpdatesReceived(List<Update> updates) {
-        requestDispatcher.dispatch((Update) updates);
-
-    }
-
-    @Override
-    public void onUpdateReceived(Update update) {
-        if(update.hasMessage()){
-            Message message = update.getMessage();
-            if(message.hasText()){
-                String text = message.getText();       
-                if(text.equals("/start")){
-                    String response = "Привет, " + message.getFrom().getFirstName() + ". Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
-                    sendMsg(message, response);
-                }
-            }
-        }
+    public void onUpdateReceived(Update update){
+        requestDispatcher.dispatch(update);
+//    }
+//
+//
+//
+//    @Override
+//    public void onUpdateReceived(Update update) {
+//        this.update = update;
+//        if(update.hasMessage()){
+//            Message message = update.getMessage();
+//            if(message.hasText()){
+//                String text = message.getText();
+//                if(text.equals("/start")){
+//                    String response = "Привет, " + message.getFrom().getFirstName() + ". Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
+//                    sendMsg(message, response);
+//                }
+//            }
+//        }
         if(update.hasMessage()){
             Message message = update.getMessage();
             if(message.hasText()){

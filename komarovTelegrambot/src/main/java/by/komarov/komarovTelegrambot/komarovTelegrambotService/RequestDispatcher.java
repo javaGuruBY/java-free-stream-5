@@ -1,22 +1,19 @@
 package by.komarov.komarovTelegrambot.komarovTelegrambotService;
 
 import by.komarov.komarovTelegrambot.BotCommand;
-import by.komarov.komarovTelegrambot.IngvarKomarovBot;
 import by.komarov.komarovTelegrambot.Processor.HelpProcessor;
 import by.komarov.komarovTelegrambot.Processor.NoneProcessor;
 import by.komarov.komarovTelegrambot.Processor.SettingsProcessor;
 import by.komarov.komarovTelegrambot.Processor.StartProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 @Service
-public class RequestDispatcher{
+public class RequestDispatcher {
     @Autowired
-    komarovTelegrambotService.MessageService messageService;
+   MessageService messageService;
     @Autowired
     HelpProcessor helpProcessor;
     @Autowired
@@ -60,27 +57,4 @@ public class RequestDispatcher{
         }
         return BotCommand.NONE;
     }
-}
-
-
-public class komarovTelegrambotService {
-    @Service
-    public class MessageService {
-
-
-        @Autowired
-        IngvarKomarovBot IngvarKomarovBot;
-
-        public void SendMessage(Message message, String text) {
-            SendMessage sendMessage = new SendMessage();
-            sendMessage.setChatId(message.getChatId().toString());
-            sendMessage.setText();
-            try {
-                IngvarKomarovBot.execute(sendMessage);
-            } catch (TelegramApiException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
 }
