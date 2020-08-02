@@ -8,6 +8,6 @@ public class SettingsProcessor implements Processor {
     @Override
     public String run() {
 
-        return "Nothing you can set now, sorry...";
+        return "Пока что нечего настраивать";
     }
 }

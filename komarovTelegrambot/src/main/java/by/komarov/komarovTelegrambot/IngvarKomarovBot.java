@@ -9,14 +9,12 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.util.List;
-
 
 @Component
 public class IngvarKomarovBot extends TelegramLongPollingBot {
     @Autowired
     RequestDispatcher requestDispatcher;
-    private Update update;
+
 
     @Override
     public String getBotToken() {
@@ -28,29 +26,29 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
         return "IngvarKomarovBot";
     }
 
-    @Override
-    public void onUpdateReceived(Update update){
-        requestDispatcher.dispatch(update);
+//    @Override
+//    public void onUpdateReceived(Update update){
+//        requestDispatcher.dispatch(update);
 //    }
 //
 //
 //
-//    @Override
-//    public void onUpdateReceived(Update update) {
-//        this.update = update;
-//        if(update.hasMessage()){
-//            Message message = update.getMessage();
-//            if(message.hasText()){
-//                String text = message.getText();
-//                if(text.equals("/start")){
-//                    String response = "Привет, " + message.getFrom().getFirstName() + ". Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
-//                    sendMsg(message, response);
-//                }
-//            }
-//        }
-        if(update.hasMessage()){
+    @Override
+    public void onUpdateReceived(Update update) {
+        if (update.hasMessage()) {
             Message message = update.getMessage();
-            if(message.hasText()){
+            if (message != null && message.hasText()) {
+                String text = message.getText();
+                if (text.equals("/start")) {
+                    String response = "Привет, " + message.getFrom().getFirstName() + ". Это бот. Введи /help";
+                    sendMsg(message, response);
+                }
+            }
+        }
+        Message message = null;
+        if (update.hasMessage()) {
+            message = update.getMessage();
+            if (message != null && message.hasText()) {
                 String text = message.getText();
                 switch (text) {
                     case "/Что это?": {
@@ -84,9 +82,17 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
                         break;
                     }
                 }
-             }
+            }
+
+
+        } else {
+            String response = "Спроси через месяц";
+            assert false;
+            sendMsg(message, response);
         }
     }
+
+
 
 
 

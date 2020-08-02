@@ -30,7 +30,7 @@ public class RequestDispatcher {
                 messageService.SendMessage(update.getMessage(), helpProcessor.run());
                 break;
             case START:
-                messageService.SendMessage(update.getMessage(), startProcessor.run());
+                messageService.SendMessage(update.getMessage(), startProcessor.run(update.getMessage()));
                 break;
             case SETTING:
                 messageService.SendMessage(update.getMessage(), settingsProcessor.run());
@@ -53,6 +53,7 @@ public class RequestDispatcher {
                 } else if (msgText.startsWith(BotCommand.SETTING.getCommand())) {
                     return BotCommand.SETTING;
                 }
+
             }
         }
         return BotCommand.NONE;
