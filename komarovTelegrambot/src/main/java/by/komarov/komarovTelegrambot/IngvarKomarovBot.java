@@ -26,7 +26,7 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
         return "IngvarKomarovBot";
     }
 
-//    @Override
+    //    @Override
 //    public void onUpdateReceived(Update update){
 //        requestDispatcher.dispatch(update);
 //    }
@@ -39,18 +39,17 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
             Message message = update.getMessage();
             if (message != null && message.hasText()) {
                 String text = message.getText();
-                if (text.equals("/start")) {
-                    String response = "Привет, " + message.getFrom().getFirstName() + ". Это бот. Введи /help";
-                    sendMsg(message, response);
-                }
-            }
-        }
-        Message message = null;
-        if (update.hasMessage()) {
-            message = update.getMessage();
-            if (message != null && message.hasText()) {
-                String text = message.getText();
                 switch (text) {
+                    case "/start": {
+                        String response = "Привет, " + message.getFrom().getFirstName() + ". Это бот. Введи /help";
+                        sendMsg(message, response);
+                        break;
+                    }
+                    case "/Settings": {
+                        String response = "Error 100500";
+                        sendMsg(message, response);
+                        break;
+                    }
                     case "/Что это?": {
                         String response = "Это бот. Можно что то спрашивать, но пока он ничего толком не ответит)";
                         sendMsg(message, response);
@@ -69,33 +68,38 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
                     case "/Что сделать на ужин?": {
                         String response = "На ночь есть вредно!";
                         sendMsg(message, response);
+
                         break;
                     }
                     case "/Какой фильм глянуть?": {
                         String response = "Смотря какое настроение у тебя сегодня";
                         sendMsg(message, response);
+
                         break;
                     }
                     case "/Хорошее": {
                         String response = "Тогда глянь что нибудь что заставит посмотреть на мир по другому, например фильм Лифт, ну или сам выбери https://rezka.ag/films/best/ ";
                         sendMsg(message, response);
+
                         break;
                     }
                     case "/Плохое": {
                         String response = "Тогда глянь что нибудь из комедий, Начало времен довольно не плохая";
                         sendMsg(message, response);
+
+                        break;
+                    }
+                    default: {
+                        String response = "Спроси черз месяц)";
+                        sendMsg(message, response);
                         break;
                     }
                 }
             }
-
-
-        } else {
-            String response = "Спроси через месяц";
-            assert false;
-            sendMsg(message, response);
         }
     }
+
+
 
 
 
