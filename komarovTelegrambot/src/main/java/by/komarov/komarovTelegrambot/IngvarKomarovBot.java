@@ -56,6 +56,11 @@ public class IngvarKomarovBot extends TelegramLongPollingBot {
                         sendMsg(message, response);
                         break;
                     }
+                    case "/help": {
+                        String response = "Ничем пока не помогу, я еще маленький. Но можешь спросить /Какой фильм глянуть или /Что сделать на ужин)";
+                        sendMsg(message, response);
+                        break;
+                    }
                     case "/Bye": {
                         String response = "Ok, bye";
                         sendMsg(message, response);
